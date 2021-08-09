@@ -74,7 +74,7 @@ ul li:hover a {
 }
 /* Hero Section */
 .hero {
-	background-image: url(../images/original.jpg);
+	background-image: url(images/original.jpg);
 	padding-top: 300px;
 	padding-bottom: 150px;
 }
@@ -155,7 +155,7 @@ ul li:hover a {
 /* Parallax Section */
 .banner {
 	background-color: #2D9AB7;
-	background-image: url(../images/parallax.png);
+	background-image: url(images/parallax.png);
 	height: 400px;
 	background-attachment: fixed;
 	background-size: cover;
@@ -257,7 +257,7 @@ footer .footer_column p {
 	padding-top: 60px;
 	padding-bottom: 60PX;
 	margin-bottom: 0px;
-	background-image: url(../images/pattern.png);
+	background-image: url(images/pattern.png);
 	background-repeat: repeat;
 }
 footer {
