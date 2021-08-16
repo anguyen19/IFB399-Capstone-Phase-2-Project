@@ -96,6 +96,8 @@ ul li:hover a {
 	width: 40%;
 	height: auto;
 }
+
+/** homescreen buttons **/
 .musican {
 	position: absolute;
 	top: 480px;
