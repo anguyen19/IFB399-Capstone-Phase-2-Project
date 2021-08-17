@@ -100,14 +100,28 @@ ul li:hover a {
 /** homescreen buttons **/
 .musican {
 	position: absolute;
+	color: #304058;
 	top: 480px;
 	left: 730px;
 	font-size: 25px;
 	font-weight: 900;
 }
 
+.text1 {
+	position:absolute;
+	top: 560px;
+	left: 680px;
+}
+
+.text2 {
+	position:absolute;
+	top: 560px;
+	left: 970px;
+}
+
 .students {
 	position: absolute;
+	color: #333333;
 	top: 480px;
 	left: 1030px;
 	font-size: 25px;
