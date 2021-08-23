@@ -1,0 +1,24 @@
+{
+  "name": "ifb399-capstone-phase-2-project",
+  "version": "1.0.0",
+  "description": "This is ZALK capstone project",
+  "main": "login.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anguyen19/IFB399-Capstone-Phase-2-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anguyen19/IFB399-Capstone-Phase-2-Project/issues"
+  },
+  "homepage": "https://github.com/anguyen19/IFB399-Capstone-Phase-2-Project#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  }
+}
