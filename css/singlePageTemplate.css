@@ -75,13 +75,13 @@ ul li:hover a {
 }
 /* Hero Section */
 .hero {
-	background-image: url(../images/original.jpg);
+	background-image: url(images/original.jpg);
 	padding-top: 300px;
 	padding-bottom: 200px;
 }
 
 .hero1 {
-	background-image: url(../images/original.jpg);
+	background-image: url(images/original.jpg);
 	padding-top: 300px;
 	padding-bottom: 50px;
 }
@@ -397,7 +397,4 @@ nav ul li {
 	padding-top: 0px;
 }
 }
-.rectangle {
-}
-.rect {
-}
+
