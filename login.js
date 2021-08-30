@@ -5,7 +5,7 @@ const encoder = express.urlencoded();
 const app = express();
 
 //create connection details for database
-var connection = mysql.createConnection({
+var db = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "",
@@ -15,41 +15,57 @@ var connection = mysql.createConnection({
 app.use(express.static(__dirname))
 
 //Connect to database 
-connection.connect(function(error){
+db.connect(function(error){
     if (error) throw error
     else 
     {
         console.log("Connection Successful")
+        
     }
 });
 
-//Send index.html
-app.get("/", function(req,res){
-    res.sendFile(__dirname+"/index.html");
-})
 
+var username;
+var password;
+//POST for login form
 app.post("/",encoder, function(req,res){
-    var username = req.body.username;
-    var password = req.body.password;
-    connection.query("SELECT * from users where username = ? and password = ?",[username,password],function(error,results,fields){
+    username = req.body.username;
+    password = req.body.password;
+    db.query("SELECT * from users where username = ? and password = ?",[username,password],function(error,results,fields){
         if(results.length > 0)
         {
+            console.log(username);
             res.redirect("/capstone_website.html");
+            console.log("Login Successful")
         }
         else
-        {
-            
+        { 
             res.redirect("/");
            
         }
         res.end();
     })
 })
-
-//if successful send capstone_website.html
-app.get("/capstone_website.html",function(req,res){
-    res.sendFile(__dirname+"/capstone_website.html");
+//POST for creating a new account 
+app.post('/register', encoder,function(req,res){
+    username = req.body.username;
+    password = req.body.password;
+    db.query("INSERT INTO users (username, password) VALUES (?,?)",[username, password],function(error,results){
+        if(error) throw error;
+        res.redirect("/index.html");
+        console.log("Account Created");
+    })
 })
-
-//set app port 
+//POST for booking form 
+app.post('/book',encoder,function (req, res) {
+    var email = req.body.email;
+    var date = req.body.date;
+    var message = req.body.message;
+    console.log(email);
+    db.query("INSERT INTO bookings (email,date,message) VALUES (?,?,?)",[email,date,message],function(error,results){
+        if (error) throw error;
+    res.redirect("/booking.html");
+        
+  })
+})
 app.listen(4500);
