@@ -75,6 +75,17 @@ ul li:hover a {
 }
 /* Hero Section */
 
+.bookingcreate {
+	margin: auto;
+	position: absolute;
+	left: 790px;
+	top: 100px;
+	font-size: 40px;
+	color: #fff;
+	
+	
+}
+
 .rect {
 	position: absolute;
 	top: 400px;
