@@ -16,7 +16,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	height: 1000px;
-	background-image: url(images/original.jpg);
+	background-image: url(../images/original.jpg);
 }
 /* Navigation */
 header {

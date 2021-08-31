@@ -145,6 +145,18 @@ ul li:hover a {
 	border-radius: 50px;
 }
 
+.button1:hover {
+	background-color: aliceblue;
+	border: 1px solid #000;
+	color: #000;
+}
+
+.button2:hover {
+	background-color: aliceblue;
+	border: 1px solid #000;
+	color: #000;
+}
+
 .button2 {
 	background-color: #333333;
 	position: absolute;
