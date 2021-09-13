@@ -2,6 +2,7 @@
 const mysql = require("mysql");
 const express = require("express");
 const encoder = express.urlencoded();
+const upload = require('express-fileupload');
 const app = express();
 
 //create connection details for database
@@ -68,4 +69,26 @@ app.post('/book',encoder,function (req, res) {
         
   })
 })
+app.use(upload());
+app.get('/upload', (req,res) =>{
+    res.sendFile(__dirname +'/upload.html')
+})
+app.post('/upload',(req,res) =>
+{
+    if(req.files){
+        console.log(req.files);
+        var file = req.files.file;
+        var filename = file.name
+        console.log(filename);
+        file.mv('upload/'+filename,function(err){
+            if(err){
+                res.send(err);
+            }
+            else{
+                console.log("File uploaded: "+filename);
+            }
+        })
+    }
+})
+
 app.listen(4500);
