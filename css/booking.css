@@ -9,6 +9,7 @@ body {
 	margin-left: 0px;
 	font-style: normal;
 	font-weight: 200;
+
 }
 /* Container */
 .container {
@@ -76,11 +77,25 @@ ul li:hover a {
 /* Hero Section */
 
 .bookingcreate {
+	font-family: "Lato Bold", sans-serif;
+	float: left;
+	left: 50%;
 	position: absolute;
-	left: 43%;
+    margin-top: 10px;
+	margin-left: -170px;
 	color: #000;
     font-size: 35px;
-	font-weight: 900;
+	font-weight: 600;	
+}
+
+.bookingcreate2 {
+	float: left;
+	left: 50%;
+	position: absolute;
+    margin-top: 55px;
+	margin-left: -163px;
+	font-weight: 600;
+	
 }
 
 .rect {
