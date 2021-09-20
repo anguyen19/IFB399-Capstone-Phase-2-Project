@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en-US">
 <head>
+ <link
+    rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,12 +46,13 @@
 
 <div id="form-main">
  <div id="HeaderBooking">
-   <p class="bookingcreate">BOOKING REQUEST</p>
+   <p class="animate__fadeInDown animate__slow bookingcreate ">BOOKING REQUEST</p>
    <p class="bookingcreate2">Fill out the form below to submit a booking request<p>
 
   <div id="form-div">
     <form class="booking" id="form1" method="POST" action ='/'>   
         <input name="email" type="text" class="validate[required,custom[email]] feedback-input"  required id="email" placeholder="Email" />
+         <input name="instrument" type="text" class="validate[required,custom[instrument]] feedback-input"  required id="instrument" placeholder="Instrument" />
         <input name="date" type="date" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"required placeholder="Date" id="date" />
         <textarea name="message" class="validate[required,length[6,300]] feedback-input" id="comment"required placeholder="Message"></textarea>
         <input type="submit" value="SUBMIT" id="button-blue" formaction='/book'/>
