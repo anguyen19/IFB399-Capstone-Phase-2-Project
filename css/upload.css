@@ -437,13 +437,7 @@ nav ul li {
   border-bottom: 1px solid #000;
 }
 
-.feedback-input:focus{
-	
-	box-shadow: 0;
-	color: #000;
-	outline: none;
-  padding: 13px 13px 13px 13px;
-}
+
 
 .focused{
 	color:#000;
@@ -457,10 +451,7 @@ textarea {
     resize:vertical;
 }
 
-input:hover, textarea:hover,
-input:focus, textarea:focus {
-	background-color:white;
-}
+
 
 #button-blue{
 	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -574,15 +565,7 @@ form p{
   color: #000;
   font-weight: 900;
 }
-form input{
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  outline: none;
-  opacity: 0;
-}
+
 form button{
   margin: 0;
   color: #fff;
@@ -628,6 +611,42 @@ form button:active{
 	margin-left: -260px;
 	font-weight: 600;
 }
+
+.sub-btn {
+  padding: 0.6em 2.3em;
+  cursor: pointer;
+  font-size: 1em;
+  color: #000;
+  background-image: linear-gradient(45deg, transparent 50%, #000000 50%);
+  background-position: 25%;
+  background-size: 400%;
+  -webkit-transition: background 500ms ease-in-out, color 500ms ease-in-out;
+  transition: background 500ms ease-in-out, color 500ms ease-in-out;
+	margin-top: 80px;
+}
+
+.sub-btn:hover {
+  color: #ffffff;
+  background-position: 100%;
+}
+
+.up-btn {
+  padding: 0.6em 2.3em;
+  cursor: pointer;
+  font-size: 1em;
+  color: #000;
+  background-image: linear-gradient(45deg, transparent 50%, #000000 50%);
+  background-position: 25%;
+  background-size: 400%;
+  -webkit-transition: background 500ms ease-in-out, color 500ms ease-in-out;
+  transition: background 500ms ease-in-out, color 500ms ease-in-out;
+}
+
+.up-btn:hover {
+  color: #ffffff;
+  background-position: 100%;
+}
+
 
 
 
