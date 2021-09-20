@@ -9,6 +9,7 @@ body {
 	margin-left: 0px;
 	font-style: normal;
 	font-weight: 200;
+	
 }
 /* Container */
 .container {
@@ -17,6 +18,7 @@ body {
 	margin-right: auto;
 	height: 1000px;
 	background-color: #FFFFFF;
+	
 }
 /* Navigation */
 header {
@@ -35,7 +37,34 @@ header {
 	margin-top: 15px;
 	margin-left: 25px;
 	letter-spacing: 4px;
+	  transition: all 0.4s;
+	
 }
+.logo:hover {
+	color:cornflowerblue;
+}
+
+.logo span {
+   cursor: pointer;
+   display: inline-block;
+   position: relative;
+   transition: 0.4s;
+ }
+ .logo span:after {
+   content: '\00bb';
+   position: absolute;
+   opacity: 0;
+   top: 0;
+   right: -20px;
+   transition: 0.5s;
+ }
+ .logo:hover span {
+   padding-right: 25px;
+ }
+ .logo:hover span:after {
+   opacity: 1;
+   right: 0;
+ }
 nav {
 	float: right;
 	width: 50%;
@@ -62,6 +91,7 @@ ul li a {
 }
 ul li:hover a {
 	color: #2C9AB7;
+	transition: all 0.4s;
 }
 .hero_header {
 	color: #FFFFFF;
@@ -72,12 +102,15 @@ ul li:hover a {
 	margin-left: 0px;
 	letter-spacing: 4px;
 	font-size: 30px;
+
 }
 /* Hero Section */
 .hero {
 	background-image: url(../images/original.jpg);
 	padding-top: 300px;
 	padding-bottom: 200px;
+
+	
 }
 
 .hero1 {
@@ -95,6 +128,7 @@ ul li:hover a {
 	margin-bottom: 350px;
 	width: 40%;
 	height: auto;
+	animation: fadeIn linear 1s;
 }
 
 /** homescreen buttons **/
@@ -105,18 +139,21 @@ ul li:hover a {
 	left: 730px;
 	font-size: 25px;
 	font-weight: 900;
+	animation: fadeIn linear 1s;
 }
 
 .text1 {
 	position:absolute;
 	top: 560px;
 	left: 680px;
+	animation: fadeIn linear 1s;
 }
 
 .text2 {
 	position:absolute;
 	top: 560px;
 	left: 970px;
+	animation: fadeIn linear 1s;
 }
 
 .students {
@@ -126,6 +163,7 @@ ul li:hover a {
 	left: 1030px;
 	font-size: 25px;
 	font-weight: 900;
+	animation: fadeIn linear 1s;
 }
 
 .button1 {
@@ -143,16 +181,18 @@ ul li:hover a {
 	margin: 4px 2px;
 	cursor: pointer;
 	border-radius: 50px;
+	animation: fadeIn linear 1s;
+	transition: all 0.4s;
 }
 
 .button1:hover {
-	background-color: aliceblue;
+	background-color: #fff;
 	border: 1px solid #000;
 	color: #000;
 }
 
 .button2:hover {
-	background-color: aliceblue;
+	background-color: #fff;
 	border: 1px solid #000;
 	color: #000;
 }
@@ -172,6 +212,8 @@ ul li:hover a {
 	margin: 4px 2px;
 	cursor: pointer;
 	border-radius: 50px;
+	animation: fadeIn linear 1s;
+	transition: all 0.4s;
 }
 
 

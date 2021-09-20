@@ -35,12 +35,41 @@ header {
 	margin-top: 15px;
 	margin-left: 25px;
 	letter-spacing: 4px;
+	  transition: all 0.4s;
+	
 }
+.logo:hover {
+	color:cornflowerblue;
+}
+
+.logo span {
+   cursor: pointer;
+   display: inline-block;
+   position: relative;
+   transition: 0.4s;
+ }
+ .logo span:after {
+   content: '\00bb';
+   position: absolute;
+   opacity: 0;
+   top: 0;
+   right: -20px;
+   transition: 0.5s;
+ }
+ .logo:hover span {
+   padding-right: 25px;
+ }
+ .logo:hover span:after {
+   opacity: 1;
+   right: 0;
+ }
+
 nav {
 	float: right;
 	width: 50%;
 	text-align: right;
 	margin-right: 25px;
+	
 }
 header nav ul {
 	list-style: none;
@@ -62,6 +91,7 @@ ul li a {
 }
 ul li:hover a {
 	color: #2C9AB7;
+	transition: all 0.4s;
 }
 .hero_header {
 	color: #FFFFFF;
