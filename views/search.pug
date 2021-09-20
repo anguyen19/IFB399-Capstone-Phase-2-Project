@@ -1,0 +1,58 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  title ZALK
+  link(href='css/booking.css' rel='stylesheet' type='text/css')
+  // The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page.
+  script.
+    var __adobewebfontsappname__="dreamweaver"
+  script(src='http://use.edgefonts.net/source-sans-pro:n2:default.js' type='text/javascript')
+head
+  // Navigation
+  header
+    a(href='capstone_website.html')
+      h4.logo
+        span ZALK
+    nav
+      ul
+        li
+          a(href='booking.html') LESSON
+        li
+          a(href='upload.html') UPLOAD
+        li
+          a(href='faq.html') FAQ
+        li
+          a(href='#contact') CONTACT
+        li
+          a(href='settings.html') SETTINGS
+        li
+          a(href='search.html') SEARCH
+        li
+          a(href='index.html') LOGOUT
+.container.bootstrap.snippets.bootdey
+  .row
+    .col-lg-12
+      .ibox.float-e-margins
+        .ibox-content
+          h2
+            | 160 results found for: 
+            span.text-navy &quot;Lesson&quot;
+          small Request time  (0.23 seconds)
+          .search-form
+            form.search(action='/' method='POST')
+              input.form-control.input-lg(type='text' placeholder='Lesson' name='searchWord')
+              .input-group-btn
+                button.btn.btn-lg.btn-primary(type='submit' value='SUBMIT' formaction='/search')
+                  | Search
+          each searchresult in resultsarray
+            .searchresult
+                h3
+                  a(href='#') #{searchresult.instrument} Lessons
+                a#search-link(href='#') #{searchresult.email}
+                p
+                  strong #{searchresult.message}
+                br
+.footer
+  p Footer

@@ -4,7 +4,10 @@ const express = require("express");
 const encoder = express.urlencoded();
 const upload = require('express-fileupload');
 const app = express();
+const pug = require('pug');
 
+app.set('view engine', 'pug');
+app.use(express.static('css'));
 //create connection details for database
 var db = mysql.createConnection({
     host: "localhost",
@@ -25,7 +28,7 @@ db.connect(function(error){
     }
 });
 
-
+var currentUsername
 var username;
 var password;
 //POST for login form
@@ -37,6 +40,7 @@ app.post("/",encoder, function(req,res){
         {
             console.log(username);
             res.redirect("/capstone_website.html");
+            currentUsername = username;
             console.log("Login Successful")
         }
         else
@@ -57,21 +61,49 @@ app.post('/register', encoder,function(req,res){
         console.log("Account Created");
     })
 })
+
+app.post('/search', encoder,function(req,res)
+{
+    var result = req.body.searchWord
+    db.query("Select * from bookings where instrument = (?)",[result],function(error, results)
+    {
+       if(results.length == 0)
+       {
+           console.log('not found')
+           res.redirect('/search.html');
+       }
+       else
+       {
+           let resultsarray = []
+           for(let i = 0; i < results.length; i++)
+           {
+                resultsarray.push(results[i]);
+                console.log(resultsarray[i].instrument)
+           }
+           console.log(JSON.stringify(resultsarray));
+           //resultsarray = JSON.stringify(resultsarray);
+           console.log(resultsarray.length);
+            res.render('search',{resultsarray: resultsarray});
+       }
+    });
+})
 //POST for booking form 
 app.post('/book',encoder,function (req, res) {
     var email = req.body.email;
     var date = req.body.date;
+    var instrument = req.body.instrument;
     var message = req.body.message;
     console.log(email);
-    db.query("INSERT INTO bookings (email,date,message) VALUES (?,?,?)",[email,date,message],function(error,results){
+    db.query("INSERT INTO bookings (email,date,instrument,message) VALUES (?,?,?,?)",[email,date,instrument,message],function(error,results){
         if (error) throw error;
     res.redirect("/booking.html");
         
   })
 })
-app.use(upload());
+
 app.get('/upload', (req,res) =>{
     res.sendFile(__dirname +'/upload.html')
+    
 })
 app.post('/upload',(req,res) =>
 {
