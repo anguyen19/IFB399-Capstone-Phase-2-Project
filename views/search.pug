@@ -46,10 +46,10 @@ head
               .input-group-btn
                 button.btn.btn-lg.btn-primary(type='submit' value='SUBMIT' formaction='/search')
                   | Search
-          each searchresult in resultsarray
+          each searchresult, index in resultsarray
             .searchresult
                 h3
-                  a(href='#') #{searchresult.instrument} Lessons
+                  a(href= index) #{searchresult.instrument} Lessons
                 a#search-link(href='#') #{searchresult.email}
                 p
                   strong #{searchresult.message}

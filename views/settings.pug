@@ -1,0 +1,54 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  meta(charset='utf-8')
+  title Settings
+  script.
+    var __adobewebfontsappname__="dreamweaver"
+  script(src='http://use.edgefonts.net/source-sans-pro:n2:default.js' type='text/javascript')
+  link(href='css/settings.css' rel='stylesheet' type='text/css')
+  title settings
+// Navigation
+header
+  a(href='capstone_website.html')
+    h4.logo
+      span ZALK
+  nav
+    ul
+      li
+        a(href='booking.html') LESSON
+      li
+        a(href='#about') UPLOAD
+      li
+        a(href='faq.html') FAQ
+      li
+        a(href='#contact') CONTACT
+      li
+        a(href='#contact') SETTINGS
+      li
+        a(href='search.html') SEARCH
+      li
+        a(href='index.html') LOGOUT
+
+form.form-style-9(method='POST' action='/')
+  ul
+    li
+      input.field-style.field-split.align-left(type='text' name='fullName' placeholder='Name')
+      input.field-style.field-split.align-right(type='email' name='email' placeholder='Email')
+    li
+      input.field-style.field-split.align-left(type='text' name='phone' placeholder='Phone')
+      input.field-style.field-split.align-right(type='text' name='instrument' placeholder='Instrument')
+    li
+      input.field-style.field-full.align-none(type='text' name='password' placeholder='Current Password')
+    li
+      input.field-style.field-full.align-none(type='text' name='passwordNew' placeholder='New Password')
+    li
+      input(type='submit' value='SUBMIT' formaction='/update')
+.notifications
+    h1 Booking Notifactions
+      ul 
+        li #{results}
+.footer
+  p Footer
