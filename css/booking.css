@@ -119,12 +119,12 @@ ul li:hover a {
 animation: fadeIn linear 1s;
 }
 
-.bookingcreate2 {
+.lessoncreate2 {
 	float: left;
 	left: 50%;
 	position: absolute;
     margin-top: 55px;
-	margin-left: -163px;
+	margin-left: -210px;
 	font-weight: 600;
 	animation: fadeIn linear 1s;
 	
