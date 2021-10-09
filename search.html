@@ -22,7 +22,7 @@
     </a>
     <nav>
       <ul>
-        <li><a href="booking.html">LESSON</a></li>
+        <li><a href="lesson.html">LESSON</a></li>
         <li><a href="upload.html">UPLOAD</a></li>
         <li> <a href="faq.html">FAQ</a></li>
          <li> <a href="venues.html">VENUES</a>
@@ -42,7 +42,11 @@
                         <h2>
                             160 results found for: <span class="text-navy">"Lesson"</span>
                         </h2>
-                        <small>Request time  (0.23 seconds)</small>
+                        <div id="btncontainer"><button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                        <button class="btn" onclick="filterSelection('guitar')"> Guitar</button>
+						  <button class="btn" onclick="filterSelection('piano')"> Piano</button>
+						  <button class="btn" onclick="filterSelection('singing')"> Singing</button>
+						  <button class="btn" onclick="filterSelection('pricing')"> Pricing ( below $40 )</button></div>
             
                         <div class="search-form">
                             <form action="/" method="POST" class ='search'>
