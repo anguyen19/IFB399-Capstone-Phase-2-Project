@@ -7,6 +7,7 @@ const app = express();
 const pug = require('pug');
 const { application } = require("express");
 const { Http2ServerRequest } = require("http2");
+const { Console } = require("console");
 var resultsarray = []
  
 app.set('view engine', 'pug');
@@ -100,6 +101,41 @@ app.post('/update',encoder,function(req,res){
         }})
 
 })
+app.get('/creation', encoder, function(req,res)
+{
+    db.query("Select * from users where username = (?)",[currentUsername], function(error, results)
+    {
+        resultsarray = []
+        for(let i = 0; i < results.length; i++)
+        {
+            resultsarray.push(results[i]);
+        }
+        console.log(resultsarray[0].email);
+        if (resultsarray[0].email == null)
+        {
+            res.render('nullcreation');
+        }
+        else
+        {
+            res.redirect('lesson.html')
+        }
+    })
+})
+app.get('/searchpage', encoder, function(req,res)
+{
+    console.log('test');
+    db.query("Select * from bookings",function(error,results)
+    {
+        resultsarray = []
+           for(let i = 0; i < results.length; i++)
+           {
+                resultsarray.push(results[i]);
+                console.log(resultsarray[i].instrument)
+           }
+           res.render('search',{resultsarray: resultsarray});
+    })  
+})
+
 
 app.post('/search', encoder,function(req,res)
 {
@@ -155,6 +191,9 @@ app.get("/0", (req,res) =>
 app.get("/1", (req,res) =>
 {
     console.log(resultsarray[1]);
+    var booking = (resultsarray);
+    console.log(booking[0].email);
+    db.query("UPDATE bookings SET booked = 1 where email = ?",[booking[1].email]);
 })
 app.get("2", (req,res) =>
 {
@@ -173,39 +212,48 @@ app.get('/settings', async (req,res)=> {
     var bookingEmail;
     db.query ("SELECT email FROM users WHERE username = (?)",[username],(error,results) => {
             userEmail = results[0].email;
-            console.log(userEmail)
             if(results[0].email == null)
             {
+                console.log('does this work ?')
                 console.log(results[0])
-                res.render('settings', {results: "no lesson requests"});
+                res.redirect('settings.html')
                 //throw error;
                 
             }
             else
             {
-                //console.log(results)
                 db.query("SELECT * FROM bookings WHERE email = ?",[userEmail],(error,results)=>{
                    
-                    if(results.length == 0){
+                    if(results.length == 0)
+                    {
 
+                        res.redirect("settings.html")
                     }
                     else 
                     {
-                        bookingEmail = results[0].email;
-                        //console.log(results);
-                        if(userEmail == bookingEmail && results[0].booked == 1)
+                        var bookedArray = []
+                        for (let i = 0; i < results.length;i++)
                         {
-                            console.log(results[0].instrument)
-                            var response = 'New lesson Request for '+results[0].instrument
-                            res.render('settings', {results:response});
+                            if(results[i].booked == 1)
+                            {
+                                bookedArray.push(results[i].instrument);
+                            }
                         }
+
+                        if (bookedArray.length == 0)
+                        {
+                            res.redirect('settings.html')
+                            console.log('none here')
+                        }
+                        else{
+                            res.render('settings', {results: bookedArray});
+                            console.log(bookedArray);
+                        }
+                        
                     }
                 })
             }
     })
-   
-    //var bookingEmail = db.query("SELECT * from bookings where email =")
-    //res.render('settings');
 })
 app.post('/upload',(req,res) =>
 {

@@ -1,0 +1,45 @@
+doctype html
+head
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css')
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  title Booking
+  // The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page.
+  script.
+    var __adobewebfontsappname__="dreamweaver"
+  script(src='http://use.edgefonts.net/source-sans-pro:n2:default.js' type='text/javascript')
+  link(href='css/booking.css' rel='stylesheet' type='text/css')
+  script(type='text/javascript' src='databaseScripts/bookings.js')
+.container
+  // Navigation
+  header
+    a(href='capstone_website.html')
+      h4.logo
+        span ZALK
+    nav
+      ul
+        li
+          a(href='#hero') LESSON
+        li
+          a(href='upload.html') UPLOAD
+        li
+          a(href='faq.html') FAQ
+        li
+          a(href='venues.html') VENUES
+        li
+          a(href='/settings') SETTINGS
+        li
+          a(href='search.html') SEARCH
+        li
+          a(href='index.html') LOGOUT
+  // Hero Section
+  section#hero.hero1
+  #form-main
+    #HeaderBooking
+        h1 Please go to settings and input your email before you are able to create a lesson
+        // Footer Section
+        .footer
+          p Footer
+        // Copyrights Section
+    // Main Container Ends

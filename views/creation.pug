@@ -1,0 +1,58 @@
+doctype html
+head
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css')
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  title Booking
+  // The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page.
+  script.
+    var __adobewebfontsappname__="dreamweaver"
+  script(src='http://use.edgefonts.net/source-sans-pro:n2:default.js' type='text/javascript')
+  link(href='css/booking.css' rel='stylesheet' type='text/css')
+  script(type='text/javascript' src='databaseScripts/bookings.js')
+.container
+  // Navigation
+  header
+    a(href='capstone_website.html')
+      h4.logo
+        span ZALK
+    nav
+      ul
+        li
+          a(href='#hero') LESSON
+        li
+          a(href='upload.html') UPLOAD
+        li
+          a(href='faq.html') FAQ
+        li
+          a(href='venues.html') VENUES
+        li
+          a(href='settings.html') SETTINGS
+        li
+          a(href='search.html') SEARCH
+        li
+          a(href='index.html') LOGOUT
+  // Hero Section
+  section#hero.hero1
+  #form-main
+    #HeaderBooking
+      p.animate__fadeInDown.animate__slow.bookingcreate LESSON CREATION
+      p.lessoncreate2 Create your lesson bellow and we will display it for students to see
+      p.bookingcreate2
+      p
+        #form-div
+          form#form1.booking(method='POST' action='/')
+            input#email.feedback-input(name='email' type='text' class='validate[required,custom[email]]' required='' placeholder='Email')
+            input#instrument.feedback-input(name='instrument' type='text' class='validate[required,custom[instrument]]' required='' placeholder='Instrument')
+            input#price.feedback-input(name='price' type='text' class='validate[required,custom[price]]' required='' placeholder='Price')
+            input.feedback-input(name='inperson/online' type='radio' class='validate[required,custom[inperson/online]]' required='' id='inperson/online' value = 'person')
+            label(for = 'person')
+            input#date.feedback-input(name='date' type='date' class='validate[required,custom[onlyLetter],length[0,100]]' required='' placeholder='Date')
+            textarea#comment.feedback-input(name='message' class='validate[required,length[6,300]]' required='' placeholder='Message')
+            input#button-blue(type='submit' value='SUBMIT' formaction='/book')
+        // Footer Section
+        .footer
+          p Footer
+        // Copyrights Section
+    // Main Container Ends

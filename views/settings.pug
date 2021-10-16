@@ -1,9 +1,9 @@
 doctype html
+// saved from url=(0030)http://localhost:4500/settings
 head
-  meta(charset='utf-8')
+  meta(http-equiv='Content-Type' content='text/html; charset=UTF-8')
   meta(http-equiv='X-UA-Compatible' content='IE=edge')
   meta(name='viewport' content='width=device-width, initial-scale=1')
-  meta(charset='utf-8')
   title Settings
   script.
     var __adobewebfontsappname__="dreamweaver"
@@ -12,27 +12,31 @@ head
   title settings
 // Navigation
 header
-  a(href='capstone_website.html')
+  a(href='http://localhost:4500/capstone_website.html')
     h4.logo
       span ZALK
   nav
     ul
       li
-        a(href='booking.html') LESSON
+        a(href='http://localhost:4500/booking.html') LESSON
       li
-        a(href='#about') UPLOAD
+        a(href='http://localhost:4500/settings#about') UPLOAD
       li
-        a(href='faq.html') FAQ
+        a(href='http://localhost:4500/faq.html') FAQ
       li
-        a(href='#contact') CONTACT
+        a(href='http://localhost:4500/settings#contact') CONTACT
       li
-        a(href='#contact') SETTINGS
+        a(href='http://localhost:4500/settings#contact') SETTINGS
       li
-        a(href='search.html') SEARCH
+        a(href='http://localhost:4500/search.html') SEARCH
       li
-        a(href='index.html') LOGOUT
-
-form.form-style-9(method='POST' action='/')
+        a(href='http://localhost:4500/index.html') LOGOUT
+#settings-title
+  p.setting-title SETTINGS
+  p.settings-text
+    | Enter/change your profile settings below. Notifications for booking request will appear on this page!
+  p
+form.form-style-9(method='POST' action='http://localhost:4500/')
   ul
     li
       input.field-style.field-split.align-left(type='text' name='fullName' placeholder='Name')
@@ -47,8 +51,21 @@ form.form-style-9(method='POST' action='/')
     li
       input(type='submit' value='SUBMIT' formaction='/update')
 .notifications
-    h1 Booking Notifactions
-      ul 
-        li #{results}
+  span.closebtn &times;
+  h1
+    strong BOOKING NOTIFICATION:
+    each booking in results
+      h2 New lesson request for #{booking}
+script.
+  var close = document.getElementsByClassName("closebtn");
+  var i;
+  for (i = 0; i < close.length; i++) {
+  close[i].onclick = function(){
+  location.assign("settings.html")
+  var div = this.parentElement;
+  div.style.opacity = "0";
+  setTimeout(function(){ div.style.display = "none"; }, 600);
+  }
+  }
 .footer
   p Footer
