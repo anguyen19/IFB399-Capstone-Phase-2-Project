@@ -40,11 +40,22 @@
                 <div class="ibox float-e-margins">
                     <div class="ibox-content">
 
-                        <div id="btncontainer"><button class="btn active" onclick="filterSelection('all')"> Show all</button>
-                        <button class="btn" onclick="filterSelection('guitar')"> Guitar</button>
-						  <button class="btn" onclick="filterSelection('piano')"> Piano</button>
-						  <button class="btn" onclick="filterSelection('singing')"> Singing</button>
-						  <button class="btn" onclick="filterSelection('pricing')"> Pricing ( below $40 )</button></div>
+                        <label class="dropdown">
+
+						  <div class="dd-button">
+							FILTERS
+						  </div>
+
+						  <input type="checkbox" class="dd-input" id="test">
+
+						  <ul class="dd-menu">
+							<li>Guitar</li>
+							<li>Singing</li>
+							<li>Piano</li>
+						  </ul>
+
+						</label>
+
 
             
                         <div class="search-form">
