@@ -90,7 +90,7 @@ ul li a {
 	text-decoration: none;
 }
 ul li:hover a {
-	color: #2C9AB7;
+	color: #fff;
 	transition: all 0.4s;
 }
 .hero_header {
@@ -120,47 +120,47 @@ ul li:hover a {
 }
 .rect {
 	position: absolute;
-	top: 25em;
-	left: 35.625em;
-	display: block;
-  	margin-left: auto;
-  	margin-right: auto;
-	margin-bottom: 350px;
+	left: 30%;
+	margin-right: auto;
 	width: 40%;
 	height: auto;
+
 	animation: fadeIn linear 1s;
+	display: inline-block;
 }
 
 /** homescreen buttons **/
 .musican {
 	position: absolute;
 	color: #304058;
-	top: 19.2em;
-	left: 29.2em;
+	left: 37.5%;
 	font-size: 25px;
+	width: 50%;
+	margin-top: 3%;
 	font-weight: 900;
 	animation: fadeIn linear 1s;
 }
 
 .text1 {
 	position:absolute;
-	top: 560px;
-	left: 680px;
+	left: 34.5%;
+	margin-top: 6%;
 	animation: fadeIn linear 1s;
 }
 
 .text2 {
 	position:absolute;
-	top: 35em;
-	left: 60.625em;
+	left: 52.5%;
+	margin-top: 6%;
+	text-align: center;
 	animation: fadeIn linear 1s;
 }
 
 .students {
 	position: absolute;
 	color: #333333;
-	top: 480px;
-	left: 1030px;
+	left: 54%;
+	margin-top: 3%;
 	font-size: 25px;
 	font-weight: 900;
 	animation: fadeIn linear 1s;
@@ -169,20 +169,20 @@ ul li:hover a {
 .button1 {
 	background-color: #304058;
 	position: absolute;
-	top: 650px;
-	left: 750px;
+	left: 38.9%;
 	border: none;
 	color: white;
 	padding: 20px;
 	text-align: center;
 	text-decoration: none;
-	display: inline-block;
 	font-size: 14px;
-	margin: 4px 2px;
+	margin-top: 10%;
 	cursor: pointer;
 	border-radius: 50px;
 	animation: fadeIn linear 1s;
 	transition: all 0.4s;
+	width: auto;
+	height: auto;
 }
 
 .button1:hover {
@@ -200,16 +200,14 @@ ul li:hover a {
 .button2 {
 	background-color: #333333;
 	position: absolute;
-	top: 650px;
-	left: 1030px;
+	left: 55%;
+	margin-top: 10%;
 	border: none;
 	color: white;
 	padding: 20px;
 	text-align: center;
 	text-decoration: none;
-	display: inline-block;
 	font-size: 14px;
-	margin: 4px 2px;
 	cursor: pointer;
 	border-radius: 50px;
 	animation: fadeIn linear 1s;
@@ -305,7 +303,7 @@ nav ul li {
 	text-align: center;
 }
 .banner {
-	background-color: #2D9AB7;
+	background-color: #fff;
 	background-image: none;
 }
 .tagline {
@@ -329,7 +327,7 @@ nav ul li {
 	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-left: 0px;
-	color: #043745;
+	color: #000000;
 }
 .container header nav {
 	margin-top: 0px;
@@ -340,7 +338,7 @@ nav ul li {
 	float: none;
 	overflow: auto;
 	display: inline-block;
-	background: #52bad5;
+	background: #fff;
 }
 header nav ul {
 	padding: 0px;

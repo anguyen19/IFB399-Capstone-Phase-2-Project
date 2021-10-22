@@ -382,12 +382,10 @@ nav ul li {
 }
 .form-style-9 ul li input[type="button"], 
 .form-style-9 ul li input[type="submit"] {
-	-moz-box-shadow: inset 0px 1px 0px 0px #3985B1;
-	-webkit-box-shadow: inset 0px 1px 0px 0px #3985B1;
-	box-shadow: inset 0px 1px 0px 0px #3985B1;
-	background-color: #216288;
-	border: 1px solid #17445E;
-	display: inline-block;
+	
+
+	background-color: #304058;
+	
 	cursor: pointer;
 	color: #FFFFFF;
 	padding: 8px 18px;
@@ -430,7 +428,7 @@ nav ul li {
 }
 
 .setting-title {
-			font-family: "Lato Bold", sans-serif;
+	font-family: "Lato Bold", sans-serif;
 	float: left;
 	left: 50%;
 	position: absolute;
@@ -440,6 +438,7 @@ nav ul li {
     font-size: 35px;
 	font-weight: 600;
 	animation: fadeIn linear 1s;
+	
 }
 
 .settings-text {
@@ -447,7 +446,9 @@ nav ul li {
 	left: 50%;
 	position: absolute;
     margin-top: -50px;
-	margin-left: -340px;
+	margin-left: -400px;
 	font-weight: 600;
 	animation: fadeIn linear 1s;
+	padding-left: 100px;
+	padding-right: 100px;
 }

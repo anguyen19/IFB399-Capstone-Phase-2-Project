@@ -91,7 +91,7 @@ ul li a {
 	text-decoration: none;
 }
 ul li:hover a {
-	color: #2C9AB7;
+	color: #FFFFFF;
 	transition: all 0.4s;
 }
 .hero_header {
@@ -295,7 +295,7 @@ nav ul li {
 	text-align: center;
 }
 .banner {
-	background-color: #2D9AB7;
+	background-color: #FFFFFF;
 	background-image: none;
 }
 .tagline {
@@ -319,7 +319,7 @@ nav ul li {
 	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-left: 0px;
-	color: #043745;
+	color: #000000;
 }
 .container header nav {
 	margin-top: 0px;
@@ -330,11 +330,12 @@ nav ul li {
 	float: none;
 	overflow: auto;
 	display: inline-block;
-	background: #52bad5;
+	background: #fff;
 }
 header nav ul {
 	padding: 0px;
 	float: none;
+	margin-bottom: 150px;
 }
 nav ul li {
 	margin-top: 0px;
@@ -440,6 +441,7 @@ nav ul li {
 	margin-top: 0px;
 	padding-top: 0px;
 }
+	
 }
 
 
