@@ -83,7 +83,7 @@ ul li a {
 	text-decoration: none;
 }
 ul li:hover a {
-	color: #2C9AB7;
+	color: cornflowerblue;
 	text-decoration: none;
 	transition: all 0.4s;
 }

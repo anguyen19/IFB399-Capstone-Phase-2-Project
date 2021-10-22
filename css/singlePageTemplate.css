@@ -90,7 +90,7 @@ ul li a {
 	text-decoration: none;
 }
 ul li:hover a {
-	color: #fff;
+	color: cornflowerblue;
 	transition: all 0.4s;
 }
 .hero_header {
@@ -124,7 +124,6 @@ ul li:hover a {
 	margin-right: auto;
 	width: 40%;
 	height: auto;
-
 	animation: fadeIn linear 1s;
 	display: inline-block;
 }
@@ -170,6 +169,7 @@ ul li:hover a {
 	background-color: #304058;
 	position: absolute;
 	left: 38.9%;
+	margin-right: 10px;
 	border: none;
 	color: white;
 	padding: 20px;
@@ -181,8 +181,11 @@ ul li:hover a {
 	border-radius: 50px;
 	animation: fadeIn linear 1s;
 	transition: all 0.4s;
-	width: auto;
-	height: auto;
+	float: none;
+	display: block;
+
+	
+	
 }
 
 .button1:hover {
