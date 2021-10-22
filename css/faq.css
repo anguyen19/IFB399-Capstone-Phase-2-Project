@@ -200,3 +200,8 @@ ul li:hover a {
   color: white;
   text-align: center;
 }
+
+.footer-text {
+	opacity: 0.5;
+	margin-top: 1px;
+}

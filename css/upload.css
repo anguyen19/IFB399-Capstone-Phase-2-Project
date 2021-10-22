@@ -865,5 +865,8 @@ table.shoping-cart-table tr td:last-child {
 }
 
   
-
+.footer-text {
+	opacity: 0.5;
+	margin-top: 1px;
+}
 

@@ -701,6 +701,10 @@ input:focus, textarea:focus {
   border-bottom: 1px solid #cccccc;
 }
 
+.footer-text {
+	opacity: 0.5;
+	margin-top: 1px;
+}
   
 
 

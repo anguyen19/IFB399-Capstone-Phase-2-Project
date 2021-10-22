@@ -121,6 +121,7 @@ ul li:hover a {
 .rect {
 	position: absolute;
 	left: 30%;
+	margin-top: -3%;
 	margin-right: auto;
 	width: 40%;
 	height: auto;
@@ -169,10 +170,9 @@ ul li:hover a {
 	background-color: #304058;
 	position: absolute;
 	left: 38.9%;
-	margin-right: 10px;
 	border: none;
 	color: white;
-	padding: 20px;
+	padding: 1%;
 	text-align: center;
 	text-decoration: none;
 	font-size: 14px;
@@ -183,6 +183,7 @@ ul li:hover a {
 	transition: all 0.4s;
 	float: none;
 	display: block;
+
 
 	
 	
@@ -207,7 +208,7 @@ ul li:hover a {
 	margin-top: 10%;
 	border: none;
 	color: white;
-	padding: 20px;
+	padding: 1%;
 	text-align: center;
 	text-decoration: none;
 	font-size: 14px;
@@ -451,5 +452,10 @@ nav ul li {
 	margin-top: 0px;
 	padding-top: 0px;
 }
+}
+
+.footer-text {
+	opacity: 0.5;
+	margin-top: 1px;
 }
 

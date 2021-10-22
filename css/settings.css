@@ -452,3 +452,8 @@ nav ul li {
 	padding-left: 100px;
 	padding-right: 100px;
 }
+
+.footer-text {
+	opacity: 0.5;
+	margin-top: 1px;
+}
