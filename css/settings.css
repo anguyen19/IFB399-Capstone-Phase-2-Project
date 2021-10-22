@@ -1,6 +1,5 @@
 @charset "UTF-8";
-
-body{
+body {
 	font-family: source-sans-pro;
 	background-color: #f2f2f2;
 	margin-right: 0px;
@@ -8,19 +7,15 @@ body{
 	margin-left: 0px;
 	font-style: normal;
 	font-weight: 900;
-	
 }
-
-
 header {
 	width: 100%;
 	height: 5.5%;
 	background-color: #FFFFFF;
 	position: fixed;
-	top:0px;
+	top: 0px;
 	z-index: 1;
 }
-
 .logo {
 	color: #000000;
 	font-weight: bold;
@@ -30,34 +25,32 @@ header {
 	margin-top: 15px;
 	margin-left: 25px;
 	letter-spacing: 4px;
-	  transition: all 0.4s;
-	
+	transition: all 0.4s;
 }
 .logo:hover {
-	color:cornflowerblue;
+	color: cornflowerblue;
 }
-
 .logo span {
-   cursor: pointer;
-   display: inline-block;
-   position: relative;
-   transition: 0.4s;
- }
- .logo span:after {
-   content: '\00bb';
-   position: absolute;
-   opacity: 0;
-   top: 0;
-   right: -20px;
-   transition: 0.5s;
- }
- .logo:hover span {
-   padding-right: 25px;
- }
- .logo:hover span:after {
-   opacity: 1;
-   right: 0;
- }
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.4s;
+}
+.logo span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+.logo:hover span {
+	padding-right: 25px;
+}
+.logo:hover span:after {
+	opacity: 1;
+	right: 0;
+}
 nav {
 	float: right;
 	width: 50%;
@@ -97,16 +90,16 @@ ul li:hover a {
 	letter-spacing: 4px;
 	font-size: 30px;
 }
-
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #304058;
-  color: white;
-  text-align: center;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #304058;
+	color: white;
+	text-align: center;
 }
+
 /* Mobile */
 @media (max-width: 320px) {
 .logo {
@@ -126,7 +119,6 @@ ul li:hover a {
 	float: none;
 	display: none;
 }
-
 nav ul li {
 	margin-top: 0px;
 	margin-right: 0px;
@@ -323,10 +315,7 @@ nav ul li {
 	padding-top: 0px;
 }
 }
-
-
-
-.form-style-9{
+.form-style-9 {
 	max-width: 450px;
 	background: #FAFAFA;
 	padding: 30px;
@@ -334,24 +323,23 @@ nav ul li {
 	box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
 	border-radius: 10px;
 	margin-top: 200px;
-	right:40px;
-	display:block
-
+	right: 40px;
+	display: block
 }
-.form-style-9 ul{
-	padding:0;
-	margin:0;
-	list-style:none;
+.form-style-9 ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
 }
-.form-style-9 ul li{
+.form-style-9 ul li {
 	display: block;
 	margin-bottom: 10px;
 	min-height: 35px;
 }
-.form-style-9 ul li  .field-style{
-	box-sizing: border-box; 
+.form-style-9 ul li .field-style {
+	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box; 
+	-moz-box-sizing: border-box;
 	padding: 8px;
 	outline: none;
 	border: 1px solid #B0CFE0;
@@ -359,48 +347,42 @@ nav ul li {
 	-moz-transition: all 0.30s ease-in-out;
 	-ms-transition: all 0.30s ease-in-out;
 	-o-transition: all 0.30s ease-in-out;
-
-}.form-style-9 ul li  .field-style:focus{
-	box-shadow: 0 0 5px #B0CFE0;
-	border:1px solid #B0CFE0;
 }
-.form-style-9 ul li .field-split{
+.form-style-9 ul li .field-style:focus {
+	box-shadow: 0 0 5px #B0CFE0;
+	border: 1px solid #B0CFE0;
+}
+.form-style-9 ul li .field-split {
 	width: 49%;
 }
-.form-style-9 ul li .field-full{
+.form-style-9 ul li .field-full {
 	width: 100%;
 }
-.form-style-9 ul li input.align-left{
-	float:left;
+.form-style-9 ul li input.align-left {
+	float: left;
 }
-.form-style-9 ul li input.align-right{
-	float:right;
+.form-style-9 ul li input.align-right {
+	float: right;
 }
-.form-style-9 ul li textarea{
+.form-style-9 ul li textarea {
 	width: 100%;
 	height: 100px;
 }
-.form-style-9 ul li input[type="button"], 
-.form-style-9 ul li input[type="submit"] {
-	
-
+.form-style-9 ul li input[type="button"], .form-style-9 ul li input[type="submit"] {
 	background-color: #304058;
-	
 	cursor: pointer;
 	color: #FFFFFF;
 	padding: 8px 18px;
 	text-decoration: none;
 	font: 12px Arial, Helvetica, sans-serif;
 }
-.form-style-9 ul li input[type="button"]:hover, 
-.form-style-9 ul li input[type="submit"]:hover {
+.form-style-9 ul li input[type="button"]:hover, .form-style-9 ul li input[type="submit"]:hover {
 	background: linear-gradient(to bottom, #2D77A2 5%, #337DA8 100%);
 	background-color: #28739E;
 }
-
 .notifications {
 	margin-top: -250px;
-  	padding: 10px;
+	padding: 10px;
 	background-color: #216288;
 	color: white;
 	opacity: 1;
@@ -409,50 +391,45 @@ nav ul li {
 	font-size: 10px;
 	border-radius: 5px;
 	display: block;
-	left:-100;
+	left: -100;
 }
 .notifications h2 {
 	margin-top: -10px;
 }
-
 .closebtn {
-  margin-left: 15px;
-  color: white;
-  font-weight: bold;
-  float: right;
-  font-size: 22px;
-  line-height: 20px;
-  cursor: pointer;
-  transition: 0.3s;
+	margin-left: 15px;
+	color: white;
+	font-weight: bold;
+	float: right;
+	font-size: 22px;
+	line-height: 20px;
+	cursor: pointer;
+	transition: 0.3s;
 	margin-top: 15px;
 }
-
 .setting-title {
 	font-family: "Lato Bold", sans-serif;
 	float: left;
 	left: 50%;
 	position: absolute;
-    margin-top: -100px;
+	margin-top: -100px;
 	margin-left: -90px;
 	color: #000;
-    font-size: 35px;
+	font-size: 35px;
 	font-weight: 600;
 	animation: fadeIn linear 1s;
-	
 }
-
 .settings-text {
 	float: left;
 	left: 50%;
 	position: absolute;
-    margin-top: -50px;
+	margin-top: -50px;
 	margin-left: -400px;
 	font-weight: 600;
 	animation: fadeIn linear 1s;
 	padding-left: 100px;
 	padding-right: 100px;
 }
-
 .footer-text {
 	opacity: 0.5;
 	margin-top: 1px;

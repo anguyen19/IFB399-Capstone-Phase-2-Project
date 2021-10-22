@@ -9,7 +9,6 @@ body {
 	margin-left: 0px;
 	font-style: normal;
 	font-weight: 200;
-	
 }
 /* Container */
 .container {
@@ -18,7 +17,6 @@ body {
 	margin-right: auto;
 	height: 1000px;
 	background-color: #FFFFFF;
-	
 }
 /* Navigation */
 header {
@@ -26,7 +24,6 @@ header {
 	height: 5.5%;
 	background-color: #FFFFFF;
 	position: fixed;
-
 }
 .logo {
 	color: #000000;
@@ -37,34 +34,32 @@ header {
 	margin-top: 15px;
 	margin-left: 25px;
 	letter-spacing: 4px;
-	  transition: all 0.4s;
-	
+	transition: all 0.4s;
 }
 .logo:hover {
-	color:cornflowerblue;
+	color: cornflowerblue;
 }
-
 .logo span {
-   cursor: pointer;
-   display: inline-block;
-   position: relative;
-   transition: 0.4s;
- }
- .logo span:after {
-   content: '\00bb';
-   position: absolute;
-   opacity: 0;
-   top: 0;
-   right: -20px;
-   transition: 0.5s;
- }
- .logo:hover span {
-   padding-right: 25px;
- }
- .logo:hover span:after {
-   opacity: 1;
-   right: 0;
- }
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.4s;
+}
+.logo span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+.logo:hover span {
+	padding-right: 25px;
+}
+.logo:hover span:after {
+	opacity: 1;
+	right: 0;
+}
 nav {
 	float: right;
 	width: 50%;
@@ -102,17 +97,13 @@ ul li:hover a {
 	margin-left: 0px;
 	letter-spacing: 4px;
 	font-size: 30px;
-
 }
 /* Hero Section */
 .hero {
 	background-image: url(../images/original.jpg);
 	padding-top: 300px;
 	padding-bottom: 200px;
-
-	
 }
-
 .hero1 {
 	background-image: url(../images/original.jpg);
 	padding-top: 300px;
@@ -128,7 +119,6 @@ ul li:hover a {
 	animation: fadeIn linear 1s;
 	display: inline-block;
 }
-
 /** homescreen buttons **/
 .musican {
 	position: absolute;
@@ -140,22 +130,19 @@ ul li:hover a {
 	font-weight: 900;
 	animation: fadeIn linear 1s;
 }
-
 .text1 {
-	position:absolute;
+	position: absolute;
 	left: 34.5%;
 	margin-top: 6%;
 	animation: fadeIn linear 1s;
 }
-
 .text2 {
-	position:absolute;
+	position: absolute;
 	left: 52.5%;
 	margin-top: 6%;
 	text-align: center;
 	animation: fadeIn linear 1s;
 }
-
 .students {
 	position: absolute;
 	color: #333333;
@@ -165,7 +152,6 @@ ul li:hover a {
 	font-weight: 900;
 	animation: fadeIn linear 1s;
 }
-
 .button1 {
 	background-color: #304058;
 	position: absolute;
@@ -183,24 +169,17 @@ ul li:hover a {
 	transition: all 0.4s;
 	float: none;
 	display: block;
-
-
-	
-	
 }
-
 .button1:hover {
 	background-color: #fff;
 	border: 1px solid #000;
 	color: #000;
 }
-
 .button2:hover {
 	background-color: #fff;
 	border: 1px solid #000;
 	color: #000;
 }
-
 .button2 {
 	background-color: #333333;
 	position: absolute;
@@ -217,23 +196,19 @@ ul li:hover a {
 	animation: fadeIn linear 1s;
 	transition: all 0.4s;
 }
-
-
-
 .light {
 	font-weight: bold;
 	color: #717070;
 }
-
 /* More info */
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #304058;
-  color: white;
-  text-align: center;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #304058;
+	color: white;
+	text-align: center;
 }
 
 /* Mobile */
@@ -453,9 +428,7 @@ nav ul li {
 	padding-top: 0px;
 }
 }
-
 .footer-text {
 	opacity: 0.5;
 	margin-top: 1px;
 }
-
