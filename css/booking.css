@@ -449,6 +449,12 @@ nav ul li {
 	padding-top:100px;
 	animation: fadeIn linear 1s;
 }
+#messageheader{
+	float: right;
+	position: absolute;
+	text-align: center;
+	right: 30em;
+}
 
 #form-div {
 	background: #fff;

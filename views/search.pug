@@ -47,9 +47,10 @@ head
             .searchresult
                 h3
                   a(href= index) #{searchresult.instrument} Lessons
-                a#search-link(href='#') #{searchresult.email}
-                p
-                  strong #{searchresult.message}
+                  p Cost: #{searchresult.price}/hr
+                  p Contact: #{searchresult.email}
+                  p
+                    strong #{searchresult.message}
                 br
 .footer
   p Footer

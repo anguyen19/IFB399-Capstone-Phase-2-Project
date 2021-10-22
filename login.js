@@ -113,7 +113,7 @@ app.get('/creation', encoder, function(req,res)
         console.log(resultsarray[0].email);
         if (resultsarray[0].email == null)
         {
-            res.render('nullcreation');
+            res.render('nullcreation',{message:"Please go to settings and input your email before you are able to create a lesson"});
         }
         else
         {
@@ -168,10 +168,13 @@ app.post('/book',encoder,function (req, res) {
     var date = req.body.date;
     var instrument = req.body.instrument;
     var message = req.body.message;
+    var meeting = req.body.type;
+    var price = req.body.price;
     console.log(email);
-    db.query("INSERT INTO bookings (email,date,instrument,message) VALUES (?,?,?,?)",[email,date,instrument,message],function(error,results){
+    db.query("INSERT INTO bookings (email,date,instrument,message,meeting,price) VALUES (?,?,?,?,?,?)",[email,date,instrument,message,meeting,price],function(error,results){
         if (error) throw error;
-    res.redirect("/booking.html");
+    res.redirect("/lesson.html");
+    console.log(price);
         
   })
 })
@@ -186,6 +189,7 @@ app.get("/0", (req,res) =>
     var booking = (resultsarray);
     console.log(booking[0].email);
     db.query("UPDATE bookings SET booked = 1 where email = ?",[booking[0].email]);
+    res.render('nullcreation', {message:"You have booked a lesson, please contact the teacher via this email: "+[booking[0].email]})
 })
 
 app.get("/1", (req,res) =>

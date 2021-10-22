@@ -120,8 +120,8 @@ ul li:hover a {
 }
 .rect {
 	position: absolute;
-	top: 400px;
-	left: 570px;
+	top: 25em;
+	left: 35.625em;
 	display: block;
   	margin-left: auto;
   	margin-right: auto;
@@ -135,8 +135,8 @@ ul li:hover a {
 .musican {
 	position: absolute;
 	color: #304058;
-	top: 480px;
-	left: 730px;
+	top: 19.2em;
+	left: 29.2em;
 	font-size: 25px;
 	font-weight: 900;
 	animation: fadeIn linear 1s;
@@ -151,8 +151,8 @@ ul li:hover a {
 
 .text2 {
 	position:absolute;
-	top: 560px;
-	left: 970px;
+	top: 35em;
+	left: 60.625em;
 	animation: fadeIn linear 1s;
 }
 

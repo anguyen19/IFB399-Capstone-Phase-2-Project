@@ -13,7 +13,7 @@ con.connect(function(err) {
   var sql = "CREATE TABLE IF NOT EXISTS users (username VARCHAR(255), password VARCHAR(255), name VARCHAR(255), email VARCHAR(255), phone VARCHAR(255), instrument VARCHAR(255), PRIMARY KEY(username))";
   var insertAdmin = "INSERT INTO users (username, password) VALUES ('admin','password')";
   var dummydata =   ['john','matt','andy','ken','zac','lorraine'];
-  var bookingTable = "CREATE TABLE IF NOT EXISTS bookings (bookingID int NOT NULL AUTO_INCREMENT, email VARCHAR(255), date DATE,instrument VARCHAR(255), message VARCHAR(255), booked INT, PRIMARY KEY(bookingID))";
+  var bookingTable = "CREATE TABLE IF NOT EXISTS bookings (bookingID int NOT NULL AUTO_INCREMENT, email VARCHAR(255), date DATE,instrument VARCHAR(255), message VARCHAR(255), booked INT, meeting INT, price VARCHAR(255), PRIMARY KEY(bookingID))";
   //Creating users table
   con.query(sql, function (err, result) {
     if (err) throw err;

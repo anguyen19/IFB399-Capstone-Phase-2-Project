@@ -26,7 +26,7 @@
     </a>
     <nav>
       <ul>
-        <li><a href="#hero">LESSON</a></li>
+        <li><a href="/creation">LESSON</a></li>
         <li><a href="upload.html">UPLOAD</a></li>
         <li> <a href="faq.html">FAQ</a></li>
          <li> <a href="venues.html">VENUES</a>
@@ -54,19 +54,14 @@
     <form class="booking" id="form1" method="POST" action ='/'>   
         <input name="email" type="text" class="validate[required,custom[email]] feedback-input"  required id="email" placeholder="Email" />
          <input name="instrument" type="text" class="validate[required,custom[instrument]] feedback-input"  required id="instrument" placeholder="Instrument" />
-          <input name="price" type="text" class="validate[required,custom[price]] feedback-input"  required id="price" placeholder="Price" />
-           <label class ="contain">In person
-            <input type="radio" checked="checked" name="radio">
-            <span class="checkmark"></span>
-            </label>
-             <label class ="contain">Online
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-            </label>
+          <input name="price" type="text" class="validate[required,custom[price]] feedback-input"  required id="price" placeholder="$Price" />
+            <input type="radio" name="type" id='offline' value='0'>
+            <label for='offline'>In Person</label>
+            <input type="radio" name="type" value='1'>
+            <label for="online">Online</label>
         <input name="date" type="date" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"required placeholder="Date" id="date" />
         <textarea name="message" class="validate[required,length[6,300]] feedback-input" id="comment"required placeholder="Message"></textarea>
         <input type="submit" value="SUBMIT" id="button-blue" formaction='/book'/>
-    
     </form>
   </div>
 
