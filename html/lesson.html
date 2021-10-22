@@ -12,7 +12,7 @@
 <script>var __adobewebfontsappname__="dreamweaver"</script>
 <script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
 
-<link href="css/booking.css" rel="stylesheet" type="text/css">
+<link href="../css/booking.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="databaseScripts/bookings.js"></script>
 
 
@@ -26,12 +26,12 @@
     </a>
     <nav>
       <ul>
-        <li><a href="#hero">LESSON</a></li>
-        <li> <a href="faq.html">FAQ</a></li>
-         <li> <a href="venues.html">VENUES</a>
-        <li> <a href="/settings">SETTINGS</a></li>
-        <li> <a href="search.html">SEARCH</a></li>
-        <li> <a href="index.html">LOGOUT</a></li>
+        <li><a href="/creation">LESSON</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="venues.html">VENUES</a></li>
+        <li><a href="/settings">SETTINGS</a></li>
+        <li><a href="/searchpage">SEARCH</a></li>
+        <li><a href="index.html">LOGOUT</a></li>
       </ul>
     </nav>
   </header>
@@ -45,17 +45,22 @@
 
 <div id="form-main">
  <div id="HeaderBooking">
-   <p class="animate__fadeInDown animate__slow bookingcreate ">BOOKING REQUEST</p>
-   <p class="bookingcreate2">Fill out the form below to submit a booking request<p>
+   <p class="animate__fadeInDown animate__slow bookingcreate ">LESSON CREATION</p>
+   <p class="lessoncreate2">Create your lesson bellow and we will display it for students to see</p>
+   <p class="bookingcreate2"><p>
 
   <div id="form-div">
     <form class="booking" id="form1" method="POST" action ='/'>   
         <input name="email" type="text" class="validate[required,custom[email]] feedback-input"  required id="email" placeholder="Email" />
          <input name="instrument" type="text" class="validate[required,custom[instrument]] feedback-input"  required id="instrument" placeholder="Instrument" />
+          <input name="price" type="text" class="validate[required,custom[price]] feedback-input"  required id="price" placeholder="$Price" />
+            <input type="radio" name="type" id='offline' value='0'>
+            <label for='offline'>In Person</label>
+            <input type="radio" name="type" value='1'>
+            <label for="online">Online</label>
         <input name="date" type="date" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"required placeholder="Date" id="date" />
         <textarea name="message" class="validate[required,length[6,300]] feedback-input" id="comment"required placeholder="Message"></textarea>
         <input type="submit" value="SUBMIT" id="button-blue" formaction='/book'/>
-    
     </form>
   </div>
 

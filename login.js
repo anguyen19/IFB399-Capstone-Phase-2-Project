@@ -43,7 +43,7 @@ app.post("/",encoder, function(req,res){
         if(results.length > 0)
         {
             console.log(username);
-            res.redirect("/capstone_website.html");
+            res.redirect("html/capstone_website.html");
             currentUsername = username;
             console.log("Login Successful")
         }
@@ -61,7 +61,7 @@ app.post('/register', encoder,function(req,res){
     password = req.body.password;
     db.query("INSERT INTO users (username, password) VALUES (?,?)",[username, password],function(error,results){
         if(error) throw error;
-        res.redirect("/index.html");
+        res.redirect("html/index.html");
         console.log("Account Created");
     })
 })
@@ -82,7 +82,7 @@ app.post('/update',encoder,function(req,res){
                 db.query("UPDATE users SET name = ?, email=?, phone = ?, instrument = ? WHERE username = ?",[fullName,email,phone,instrument,username],function(error,results,fields)
                 {
                     console.log("Details updated for ?"[username]);
-                    res.redirect('settings.html');
+                    res.redirect('html/settings.html');
                 })
             }
             else
@@ -90,7 +90,7 @@ app.post('/update',encoder,function(req,res){
                 db.query("UPDATE users SET name = ?, email=?, phone = ?, password =?, instrument = ? WHERE username = ?",[fullName,email,phone,newPassword,instrument,username],function(error,results,fields)
                 {
                     console.log("Details updated for ?"[username]);
-                    res.redirect('settings.html');
+                    res.redirect('html/settings.html');
                 })
             }
         }
@@ -117,7 +117,7 @@ app.get('/creation', encoder, function(req,res)
         }
         else
         {
-            res.redirect('lesson.html')
+            res.redirect('/html/lesson.html')
         }
     })
 })
@@ -145,7 +145,7 @@ app.post('/search', encoder,function(req,res)
        if(results.length == 0)
        {
            console.log('not found')
-           res.redirect('/search.html');
+           res.redirect('html/search.html');
        }
        else
        {
@@ -173,14 +173,14 @@ app.post('/book',encoder,function (req, res) {
     console.log(email);
     db.query("INSERT INTO bookings (email,date,instrument,message,meeting,price) VALUES (?,?,?,?,?,?)",[email,date,instrument,message,meeting,price],function(error,results){
         if (error) throw error;
-    res.redirect("/lesson.html");
+    res.redirect("html/lesson.html");
     console.log(price);
         
   })
 })
 
 app.get('/upload', (req,res) =>{
-    res.sendFile(__dirname +'/upload.html')
+    res.sendFile(__dirname +'/html/upload.html')
     
 })
 app.get("/0", (req,res) =>
@@ -206,7 +206,8 @@ app.get("2", (req,res) =>
 
 
 app.get('/', (req,res) =>{
-    res.sendFile(__dirname +'/index.html')
+    res.sendFile(__dirname +'/html/index.html')
+    console.log('test')
     
 })
 app.get('/settings', async (req,res)=> {
@@ -220,7 +221,7 @@ app.get('/settings', async (req,res)=> {
             {
                 console.log('does this work ?')
                 console.log(results[0])
-                res.redirect('settings.html')
+                res.redirect('html/settings.html')
                 //throw error;
                 
             }
@@ -231,7 +232,7 @@ app.get('/settings', async (req,res)=> {
                     if(results.length == 0)
                     {
 
-                        res.redirect("settings.html")
+                        res.redirect("html/settings.html")
                     }
                     else 
                     {
@@ -246,7 +247,7 @@ app.get('/settings', async (req,res)=> {
 
                         if (bookedArray.length == 0)
                         {
-                            res.redirect('settings.html')
+                            res.redirect('html/settings.html')
                             console.log('none here')
                         }
                         else{
@@ -259,22 +260,4 @@ app.get('/settings', async (req,res)=> {
             }
     })
 })
-app.post('/upload',(req,res) =>
-{
-    if(req.files){
-        console.log(req.files);
-        var file = req.files.file;
-        var filename = file.name
-        console.log(filename);
-        file.mv('upload/'+filename,function(err){
-            if(err){
-                res.send(err);
-            }
-            else{
-                console.log("File uploaded: "+filename);
-            }
-        })
-    }
-})
-
 app.listen(4500);
